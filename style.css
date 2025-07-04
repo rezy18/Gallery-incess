@@ -1,0 +1,204 @@
+/* Custom Font Classes */
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-comic {
+    font-family: 'Comic Neue', cursive;
+}
+
+/* Social Icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flip Card Styles */
+.flip-card {
+    perspective: 1000px;
+    height: 12rem;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+    border: 2px dashed #f687b3;
+}
+
+.flip-card-back p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+}
+
+/* Video Styles */
+.video-container {
+    position: relative;
+}
+
+.video-container::before {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ff6b88;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.video-container:hover::before {
+    opacity: 1;
+}
+
+video {
+    transition: all 0.3s ease;
+    background: #fce4ec;
+}
+
+video:hover {
+    transform: scale(1.03);
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 182, 193, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 182, 193, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 182, 193, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fce4ec;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f8bbd0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f48fb1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Tab Styles */
+.tab-btn {
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #f687b3;
+    color: white;
+    font-weight: bold;
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Video Description */
+.video-container .text-center {
+    transition: all 0.3s ease;
+}
+
+.video-container:hover .text-center {
+    color: #f687b3;
+    transform: scale(1.05);
+}
+
+/* Gallery Transition */
+#gallery {
+    transition: opacity 0.5s ease;
+}

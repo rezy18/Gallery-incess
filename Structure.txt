@@ -1,0 +1,11 @@
+📁 project/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── main-photo.png
+│   ├── music.mp3
+│   ├── gallery1.jpg
+│   ├── gallery2.jpg
+│   ├── video1.mp4
+│   └── video2.mp4

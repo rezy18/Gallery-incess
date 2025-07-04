@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Incess ✨</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-pink-50 font-sans">
+    <!-- Social Media Icons -->
+    <div class="fixed top-4 right-4 z-50 flex space-x-3">
+        <a href="https://www.instagram.com/nauffa_kennedy/" target="_blank" class="social-icon bg-pink-200 hover:bg-pink-300">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@xxubzero" target="_blank" class="social-icon bg-blue-200 hover:bg-blue-300">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-pink-400 font-dancing">Galeri Incess ✨</h1>
+        
+        <!-- Main Photo -->
+        <div class="relative group cursor-pointer" id="mainPhotoContainer">
+            <img src="assets/main-photo.jpg" alt="Foto Utama" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-pink-300 shadow-lg transform group-hover:scale-105 transition-transform duration-300 pulse">
+            <div class="absolute inset-0 rounded-full bg-pink-200 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-pink-200 px-4 py-1 rounded-full text-pink-700 font-comic text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Klik aku!
+            </div>
+        </div>
+
+        <!-- Gallery (hidden by default) -->
+        <div id="gallery" class="hidden fixed inset-0 bg-pink-50 bg-opacity-95 z-40 p-8 overflow-y-auto">
+            <div class="max-w-4xl mx-auto">
+                <button id="closeGallery" class="fixed top-4 left-4 bg-pink-200 hover:bg-pink-300 text-pink-700 px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-110">
+                    <i class="fas fa-arrow-left mr-2"></i> Kembali
+                </button>
+                
+                <h2 class="text-3xl font-bold text-center mb-8 text-pink-400 font-dancing">Galeri Incess ✨</h2>
+                
+                <!-- Tab Navigation -->
+                <div class="flex justify-center mb-8">
+                    <button class="tab-btn active px-6 py-2 bg-pink-300 text-white rounded-full" data-tab="photos">Foto-foto</button>
+                    
+                </div>
+                
+                <!-- Photos Gallery -->
+                <div id="photos-tab" class="tab-content active">
+                    <h3 class="text-xl font-semibold mb-4 text-pink-500 font-comic text-center">Gallery Photos 📸</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Photo 1 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery1.jpg" alt="Foto 1" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">1</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 2 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery2.jpg" alt="Foto 2" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">2</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 3 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery3.jpg" alt="Foto 3" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">3</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 4 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery4.jpg" alt="Foto 4" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">4</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 5 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery5.jpg" alt="Foto 5" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">5</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 6 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery6.jpg" alt="Foto 6" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">6</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 7 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery7.jpg" alt="Foto 7" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 8 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery8.jpg" alt="Foto 8" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">8</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 9 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery9.jpg" alt="Foto 9" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">9</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 10 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery10.jpg" alt="Foto 10" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">10</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 11 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery11.jpg" alt="Foto 11" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">11</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 12 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery12.jpg" alt="Foto 12" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">12</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 13 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery13.jpg" alt="Foto 13" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">13</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 14 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery14.jpg" alt="Foto 14" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">14</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 15 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery15.jpg" alt="Foto 15" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">15</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo 16 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/gallery16.jpg" alt="Foto 16" class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="flip-card-back bg-pink-100 rounded-lg p-4 flex items-center justify-center">
+                                    <p class="text-pink-700 font-comic text-center">16</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+    <!-- Music Player -->
+    <button id="musicToggle" class="fixed bottom-4 right-4 bg-pink-200 hover:bg-pink-300 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110">
+        <i class="fas fa-music text-pink-600"></i>
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Hearts -->
+    <div id="heartsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
